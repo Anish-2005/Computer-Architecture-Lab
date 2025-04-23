@@ -391,7 +391,7 @@ const VhdlTestBenchVisualizer = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">
-                VHDL Test Bench Visualizer
+                VHDL Test Bench 
               </h1>
               <p className="text-xs text-cyan-500 mt-1">
                 {isSimulating ? 'Simulating...' : waveformData ? 'Ready' : 'Enter test bench code'}
@@ -414,7 +414,7 @@ const VhdlTestBenchVisualizer = () => {
             )}
             <Link 
               to="/" 
-              className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-lg flex items-center gap-2 hover:scale-105 transition-transform text-sm border border-cyan-500/30 hover:border-cyan-400/50"
+              className="ml-4 px-4 py-2 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-lg flex items-center gap-2 hover:scale-105 transition-transform text-sm border border-cyan-500/30 hover:border-cyan-400/50"
             >
               <FaArrowLeft className="text-xs" />
               Back
@@ -424,7 +424,7 @@ const VhdlTestBenchVisualizer = () => {
       </motion.nav>
   
       {/* Main Content */}
-      <div className="relative z-10 pt-32 pb-24 px-6">
+      <div className="mt-4 relative z-10 pt-32 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

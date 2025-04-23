@@ -33,14 +33,14 @@ const ArchitectureLanding = () => {
       <div className="fixed inset-0 z-0 opacity-20">
         <div className="absolute inset-0 animate-grid-pulse bg-[length:40px_40px] bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)]" />
       </div>
-
-      {/* Floating Navbar */}
+  
+      {/* Navbar */}
       <motion.nav
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="fixed w-full top-4 px-6 z-50"
+        className="fixed w-full top-4 px-4 sm:px-6 z-50"
       >
-        <div className="backdrop-blur-xl bg-gray-900/80 border border-cyan-500/20 rounded-2xl p-4 flex justify-between items-center shadow-2xl shadow-cyan-500/10">
+        <div className="backdrop-blur-xl bg-gray-900/80 border border-cyan-500/20 rounded-2xl p-4 flex flex-col sm:flex-row justify-between items-center sm:items-center gap-4 shadow-2xl shadow-cyan-500/10">
           <Link to="/" className="flex items-center gap-3 group">
             <div className="p-2 bg-gradient-to-br from-cyan-600 to-emerald-600 rounded-lg transform group-hover:rotate-12 transition-all">
               <FaMicrochip className="text-xl" />
@@ -49,7 +49,7 @@ const ArchitectureLanding = () => {
               ARCHLAB
             </h1>
           </Link>
-          <div className="flex gap-4">
+          <div className="flex gap-2 sm:gap-4">
             <Link
               to="/vhdl-labs"
               className="px-4 py-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/10 border border-cyan-500/30 flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-all"
@@ -60,101 +60,92 @@ const ArchitectureLanding = () => {
           </div>
         </div>
       </motion.nav>
-
+  
       {/* Hero Section */}
-      <div className="relative z-10 pt-32 pb-24 px-6">
+      <div className="relative z-10 pt-32 pb-24 px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-7xl mx-auto text-center"
         >
-          <div className="inline-block mb-8 px-4 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-300 text-sm">
+          <div className="mt-16 inline-block mb-6 sm:mb-8 px-4 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-300 text-sm">
             Xilinx ISE Integrated • VHDL 2019 • FPGA Synthesis
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">
             Digital Architecture Lab
           </h1>
-          <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 mb-10 max-w-3xl mx-auto">
             Master VHDL development with full Xilinx ISE integration, from RTL design<br />
             to test bench validation and FPGA bitstream generation.
           </p>
-          
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
             <Link
               to="/vhdl-rtl"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-xl font-medium flex items-center gap-3 hover:scale-[1.02] transition-transform shadow-lg shadow-cyan-500/20"
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-xl font-medium flex items-center gap-3 hover:scale-[1.02] transition-transform shadow-lg shadow-cyan-500/20"
             >
               <FaDownload />
               VHDL RTL Generator
             </Link>
             <Link
               to="/vhdl-test"
-              className="px-8 py-4 border border-cyan-500/30 bg-gray-900/50 rounded-xl font-medium flex items-center gap-3 hover:bg-cyan-500/10 transition-colors"
+              className="px-6 py-3 sm:px-8 sm:py-4 border border-cyan-500/30 bg-gray-900/50 rounded-xl font-medium flex items-center gap-3 hover:bg-cyan-500/10 transition-colors"
             >
               <FaFlask />
-              Test Bench 
+              Test Bench
             </Link>
           </div>
         </motion.div>
       </div>
-
-      {/* Workflow Diagram */}
-      <div className="relative z-10 py-16 px-6">
+  
+      {/* Workflow */}
+      <div className="relative z-10 py-16 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="p-8 bg-gray-900/50 rounded-2xl border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-cyan-300 mb-8 text-center">VHDL Development Workflow</h3>
-            <div className="grid grid-cols-5 gap-4 text-center">
-              <div className="p-4 bg-gray-800/50 rounded-lg">
-                <div className="text-cyan-400 text-xl mb-2">1. RTL Design</div>
-                <div className="text-sm text-gray-400">VHDL Entity/Architecture</div>
-              </div>
-              <div className="p-4 bg-gray-800/50 rounded-lg">
-                <div className="text-cyan-400 text-xl mb-2">2. Test Bench</div>
-                <div className="text-sm text-gray-400">Test Cases & Assertions</div>
-              </div>
-              <div className="p-4 bg-gray-800/50 rounded-lg">
-                <div className="text-cyan-400 text-xl mb-2">3. Simulation</div>
-                <div className="text-sm text-gray-400">ISim Waveform Analysis</div>
-              </div>
-              <div className="p-4 bg-gray-800/50 rounded-lg">
-                <div className="text-cyan-400 text-xl mb-2">4. Synthesis</div>
-                <div className="text-sm text-gray-400">XST FPGA Optimization</div>
-              </div>
-              <div className="p-4 bg-gray-800/50 rounded-lg">
-                <div className="text-cyan-400 text-xl mb-2">5. Implementation</div>
-                <div className="text-sm text-gray-400">Bitstream Generation</div>
-              </div>
+          <div className="p-6 sm:p-8 bg-gray-900/50 rounded-2xl border border-cyan-500/20">
+            <h3 className="text-xl sm:text-2xl font-bold text-cyan-300 mb-6 sm:mb-8 text-center">VHDL Development Workflow</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+              {[
+                ["1. RTL Design", "VHDL Entity/Architecture"],
+                ["2. Test Bench", "Test Cases & Assertions"],
+                ["3. Simulation", "ISim Waveform Analysis"],
+                ["4. Synthesis", "XST FPGA Optimization"],
+                ["5. Implementation", "Bitstream Generation"],
+              ].map(([title, desc], i) => (
+                <div key={i} className="p-4 bg-gray-800/50 rounded-lg">
+                  <div className="text-cyan-400 text-lg sm:text-xl mb-2">{title}</div>
+                  <div className="text-sm text-gray-400">{desc}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-
-      {/* Feature Grid */}
-      <div className="relative z-10 py-24 px-6 bg-gradient-to-b from-gray-950 to-gray-900">
+  
+      {/* Features */}
+      <div className="relative z-10 py-20 px-4 sm:px-6 bg-gradient-to-b from-gray-950 to-gray-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="grid grid-cols-1 md:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
           >
             {features.map((feature, index) => (
               <div
                 key={index}
                 className="p-6 bg-gray-900/50 border border-cyan-500/20 rounded-xl hover:border-cyan-500/40 transition-colors group"
               >
-                <div className="mb-4 text-3xl">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 text-cyan-300">{feature.title}</h3>
+                <div className="mb-4 text-2xl sm:text-3xl">{feature.icon}</div>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 text-cyan-300">{feature.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
-
-      {/* Code Sections */}
-      <div className="relative z-10 py-24 px-6">
+  
+      {/* Code Examples */}
+      <div className="relative z-10 py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Entity Code */}
+          {/* Entity */}
           <div className="bg-gray-900/80 border border-cyan-500/20 rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/10">
             <div className="px-6 py-4 border-b border-cyan-500/20 flex items-center gap-3">
               <div className="flex gap-2">
@@ -164,9 +155,8 @@ const ArchitectureLanding = () => {
               </div>
               <span className="text-sm text-cyan-400">rtl/alu.vhd</span>
             </div>
-            <pre className="p-8 font-mono text-sm overflow-x-auto bg-gradient-to-br from-gray-950 to-gray-900">
-              <code className="text-cyan-300">
-{`ENTITY ALU IS
+            <pre className="p-4 sm:p-8 font-mono text-sm overflow-x-auto bg-gradient-to-br from-gray-950 to-gray-900">
+              <code className="text-cyan-300">{`ENTITY ALU IS
   PORT(
     clk      : IN  STD_LOGIC;
     opcode   : IN  STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -175,12 +165,11 @@ const ArchitectureLanding = () => {
     result   : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     flags    : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
-END ALU;`}
-              </code>
+END ALU;`}</code>
             </pre>
           </div>
-
-          {/* Test Bench Code */}
+  
+          {/* Test Bench */}
           <div className="bg-gray-900/80 border border-purple-500/20 rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/10">
             <div className="px-6 py-4 border-b border-purple-500/20 flex items-center gap-3">
               <div className="flex gap-2">
@@ -190,9 +179,8 @@ END ALU;`}
               </div>
               <span className="text-sm text-purple-400">tb/alu_tb.vhd</span>
             </div>
-            <pre className="p-8 font-mono text-sm overflow-x-auto bg-gradient-to-br from-gray-950 to-gray-900">
-              <code className="text-purple-300">
-{`PROCESS
+            <pre className="p-4 sm:p-8 font-mono text-sm overflow-x-auto bg-gradient-to-br from-gray-950 to-gray-900">
+              <code className="text-purple-300">{`PROCESS
 BEGIN
   -- Test ADD operation
   opcode <= "100";
@@ -209,49 +197,38 @@ BEGIN
   WAIT FOR 10 ns;
   ASSERT result = x"55"
     REPORT "XOR failed" SEVERITY ERROR;
-END PROCESS;`}
-              </code>
+END PROCESS;`}</code>
             </pre>
           </div>
         </div>
       </div>
-
-      {/* Tools Section */}
-      <div className="relative z-10 py-24 px-6">
+  
+      {/* Toolchain */}
+      <div className="relative z-10 py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-cyan-300 mb-12">Integrated Toolchain</h3>
-          <div className="grid grid-cols-4 gap-8">
-            <div className="p-6 bg-gray-900/50 rounded-xl border border-cyan-500/20">
-              <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/XilinxISE_DS_Logo.jpg" alt="Xilinx ISE" className="h-12 mx-auto mb-4" />
-              <div className="text-lg text-cyan-300">Xilinx ISE</div>
-              <div className="text-sm text-gray-400">Synthesis & Implementation</div>
-            </div>
-            <div className="p-6 bg-gray-900/50 rounded-xl border border-purple-500/20">
-              <img src="https://www.thalesgroup.com/sites/default/files/database/assets/images/2023-02/mcs-iSIM-logo.jpg" alt="ISim" className="h-12 mx-auto mb-4" />
-              <div className="text-lg text-purple-300">ISim</div>
-              <div className="text-sm text-gray-400">Behavioral Simulation</div>
-            </div>
-            <div className="p-6 bg-gray-900/50 rounded-xl border border-emerald-500/20">
-              <img src="https://maker-hub.georgefox.edu/w/images/thumb/d/da/Modelsim_logo.jpg/261px-Modelsim_logo.jpg" alt="ModelSim" className="h-12 mx-auto mb-4" />
-              <div className="text-lg text-emerald-300">ModelSim</div>
-              <div className="text-sm text-gray-400">Advanced Verification</div>
-            </div>
-            <div className="p-6 bg-gray-900/50 rounded-xl border border-amber-500/20">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmIKfWq3D6d0efXloU4itrHFht2uqzQfUFoQ&s" alt="Vivado" className="h-12 mx-auto mb-4" />
-              <div className="text-lg text-amber-300">Vivado</div>
-              <div className="text-sm text-gray-400">Modern Synthesis Flow</div>
-            </div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-cyan-300 mb-10">Integrated Toolchain</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+            {[
+              ["Xilinx ISE", "Synthesis & Implementation", "https://upload.wikimedia.org/wikipedia/en/0/0a/XilinxISE_DS_Logo.jpg", "cyan"],
+              ["ISim", "Behavioral Simulation", "https://www.thalesgroup.com/sites/default/files/database/assets/images/2023-02/mcs-iSIM-logo.jpg", "purple"],
+              ["ModelSim", "Advanced Verification", "https://maker-hub.georgefox.edu/w/images/thumb/d/da/Modelsim_logo.jpg/261px-Modelsim_logo.jpg", "emerald"],
+              ["Vivado", "Modern Synthesis Flow", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmIKfWq3D6d0efXloU4itrHFht2uqzQfUFoQ&s", "amber"],
+            ].map(([name, desc, img, color], i) => (
+              <div key={i} className={`p-6 bg-gray-900/50 rounded-xl border border-${color}-500/20`}>
+                <img src={img} alt={name} className="h-12 mx-auto mb-4" />
+                <div className={`text-lg text-${color}-300`}>{name}</div>
+                <div className="text-sm text-gray-400">{desc}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-
+  
       {/* Footer */}
-      <footer className="relative z-10 border-t border-cyan-500/20 py-12 px-6">
+      <footer className="relative z-10 border-t border-cyan-500/20 py-12 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p className="mb-4">
-            © {new Date().getFullYear()} ArchLab - Xilinx ISE Compatible - MIT License
-          </p>
-          <div className="flex justify-center gap-6">
+          <p className="mb-4">© {new Date().getFullYear()} ArchLab - Xilinx ISE Compatible - MIT License</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
             <Link to="/ise-setup" className="hover:text-cyan-300 transition-colors">
               ISE Setup Guide
             </Link>
@@ -266,6 +243,7 @@ END PROCESS;`}
       </footer>
     </div>
   );
+  
 };
 
 export default ArchitectureLanding;

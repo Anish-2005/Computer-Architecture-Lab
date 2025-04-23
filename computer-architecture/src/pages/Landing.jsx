@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaMicrochip, FaWaveSquare, FaProjectDiagram, FaCode, FaRegClock, FaFlask, FaDownload } from 'react-icons/fa';
+import { FaMicrochip, FaWaveSquare, FaProjectDiagram, FaCode, FaRegClock, FaFlask, FaDownload,FaGraduationCap } from 'react-icons/fa';
 
 const ArchitectureLanding = () => {
   const features = [
@@ -63,38 +63,49 @@ const ArchitectureLanding = () => {
   
       {/* Hero Section */}
       <div className="relative z-10 pt-32 pb-24 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-7xl mx-auto text-center"
-        >
-          <div className="mt-16 inline-block mb-6 sm:mb-8 px-4 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-300 text-sm">
-            Xilinx ISE Integrated • VHDL 2019 • FPGA Synthesis
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">
-            Digital Architecture Lab
-          </h1>
-          <p className="text-base sm:text-lg text-gray-400 mb-10 max-w-3xl mx-auto">
-            Master VHDL development with full Xilinx ISE integration, from RTL design<br />
-            to test bench validation and FPGA bitstream generation.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-            <Link
-              to="/vhdl-rtl"
-              className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-xl font-medium flex items-center gap-3 hover:scale-[1.02] transition-transform shadow-lg shadow-cyan-500/20"
-            >
-              <FaDownload />
-              VHDL RTL Generator
-            </Link>
-            <Link
-              to="/vhdl-test"
-              className="px-6 py-3 sm:px-8 sm:py-4 border border-cyan-500/30 bg-gray-900/50 rounded-xl font-medium flex items-center gap-3 hover:bg-cyan-500/10 transition-colors"
-            >
-              <FaFlask />
-              Test Bench
-            </Link>
-          </div>
-        </motion.div>
+      <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8"
+>
+  <div className="mt-16 inline-block mb-6 sm:mb-8 px-4 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-300 text-sm">
+    Xilinx ISE Integrated • VHDL 2019 • FPGA Synthesis
+  </div>
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400 leading-tight">
+    Digital Architecture Lab
+  </h1>
+  <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-10 max-w-3xl mx-auto">
+    Master VHDL development with full Xilinx ISE integration, from RTL design<br />
+    to test bench validation and FPGA bitstream generation.
+  </p>
+  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+    <Link
+      to="/vhdl-rtl"
+      className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-xl font-medium flex items-center gap-3 hover:scale-[1.02] transition-transform shadow-lg shadow-cyan-500/20"
+    >
+      <FaDownload />
+      VHDL RTL Generator
+    </Link>
+    <Link
+      to="/vhdl-test"
+      className="px-6 py-3 sm:px-8 sm:py-4 border border-cyan-500/30 bg-gray-900/50 rounded-xl font-medium flex items-center gap-3 hover:bg-cyan-500/10 transition-colors"
+    >
+      <FaFlask />
+      Test Bench
+    </Link>
+    {/* Updated Learn button with responsive styling */}
+    <Link
+      to="/learn"
+      className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-xl font-medium flex items-center gap-3 hover:scale-[1.02] transition-transform shadow-lg shadow-cyan-500/20"
+    >
+      <FaGraduationCap />
+      Learn More
+    </Link>
+  </div>
+</motion.div>
+
+
+
       </div>
   
       {/* Workflow */}

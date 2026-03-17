@@ -21,7 +21,7 @@
 
 ## Overview
 
-Computer Architecture Lab is a React + Vite project focused on digital design education. It combines code-first VHDL workflows with visual feedback so students can move from theory to simulation quickly.
+Computer Architecture Lab is my 4th-semester Computer Architecture subject project, built with React + Vite for digital design education. It combines code-first VHDL workflows with visual feedback so students can move from theory to simulation quickly.
 
 ## Feature Highlights
 
